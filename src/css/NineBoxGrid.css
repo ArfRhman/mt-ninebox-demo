@@ -1,0 +1,57 @@
+/* Container Styles */
+.nine-box-container {
+  width: 70%;
+  margin: auto;
+}
+
+/* Flexbox Layout for Y-axis and Grid */
+.nine-box-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap:25px; */
+}
+
+/* Y-axis Label Styles */
+.y-axis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Adjust height as needed */
+  width: 90px; /* Adjust width */
+  /* border-right: 2px solid black; */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.y-axis h5 {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  margin: 0; /* Remove margin to fit better */
+}
+.content-box{
+    border-left: 2px solid black;
+    border-bottom:2px solid black;
+    margin-left: 20px;;
+}
+
+/* Card styles */
+.card-container {
+  height: 120px;
+  width: 220px;
+  margin: auto;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-description {
+  font-size: 14px;
+}
+
+/* X-axis Label Styles */
+.x-axis {
+  text-align: center;
+  padding-top:10px;
+  padding-left:20px;
+}
