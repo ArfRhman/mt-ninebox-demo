@@ -9,31 +9,71 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* gap:25px; */
+  padding-right: 7%;
+  margin-left: -6%;
 }
 
 /* Y-axis Label Styles */
 .y-axis {
+  
+  
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px; /* Adjust height as needed */
-  width: 90px; /* Adjust width */
-  /* border-right: 2px solid black; */
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-wrap: wrap;
+  margin-top: -80px;
+  gap: 12px;
+  flex-direction: column-reverse;
 }
 
-.y-axis h5 {
-  writing-mode: vertical-lr;
+.y-axis-title{
+  writing-mode: initial;
+  transform: rotate(360deg);
+  margin-right: 4%;
+  height: 100%;
+  width: 1%;
+  margin-top: -10%;
+  font-size:24px;
+  text-align:center;
+  
+}
+.y-axis-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+  height: 360px; /* Adjust height to match grid height */
+}
+.y-axis-label {
+  font-size: 16px;
+  font-weight: bold;
+  writing-mode: vertical-rl;
   transform: rotate(180deg);
-  margin: 0; /* Remove margin to fit better */
+  text-align: center;
+  height:128px;
+  line-height:1.2;
+}
+/* Grid Container */
+.grid-items {
+  flex-grow: 1;
 }
 .content-box{
-    border-left: 2px solid black;
-    border-bottom:2px solid black;
-    margin-left: 20px;;
+  border-left: 2px solid black;
+  border-bottom:2px solid black;
+  margin-left: 20px;;
 }
 
+.card-number {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background-color: #ffb202;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 5px;
+  z-index: 1;
+}
 /* Card styles */
 .card-container {
   height: 120px;
@@ -43,15 +83,98 @@
 
 .card-title {
   font-weight: bold;
+  font-size:32px;
+  font-weight:700;
+}
+.card-title-box-green{
+  padding: 4px 8px;
+  border-radius: 5px;
+  background: #3e913e;
+}
+.card-title-box-blue{
+  padding: 4px 8px;
+  border-radius: 5px;
+  background: #22a1be;
+}
+
+.card-title-box-red{
+  padding: 4px 8px;
+  border-radius: 5px;
+  background: #a74848;
 }
 
 .card-description {
-  font-size: 14px;
+  font-size: 18px;
+  font-weight:600;
 }
-
+.card-body{
+  padding-top:10px;
+}
 /* X-axis Label Styles */
 .x-axis {
   text-align: center;
   padding-top:10px;
   padding-left:20px;
 }
+
+.x-axis-labels{
+  margin-left:3%;
+}
+.x-axis-label {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+.box-red{
+  color: #FEFEFE;
+  box-shadow: 0 2.5px 5px rgba(25, 25, 25, 0.1);
+  background: #df6974;
+  background: -webkit-gradient(linear, left top, left bottom, from(#df6974), to(#d73f4e));
+  background: linear-gradient(to bottom, #df6974, #d73f4e);
+  border-width: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(33, 34, 41, 0.1);
+}
+.box-green {
+  color: #FEFEFE;
+  box-shadow: 0 2.5px 5px rgba(25, 25, 25, 0.1);
+  background: #1dd287;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1dd287), to(#17a64a));
+  background: linear-gradient(to bottom, #1dd287, #17a64a);
+}
+.box-blue {
+  color: #FEFEFE;
+  box-shadow: 0 2.5px 5px rgba(25, 25, 25, 0.1);
+  background: #7ad0ff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#7ad0ff), to(#47beff));
+  background: linear-gradient(to bottom, #7ad0ff, #47beff);
+}
+
+.card-container {
+  height: 120px;
+  width: 220px;
+  margin: auto;
+  position: relative; /* Ensure absolute positioning works */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  cursor:pointer;
+}
+
+.card-container:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow to the card */
+}
+
+.card-container:hover .card-number {
+  transform: scale(1.2); /* Slightly enlarge the number on hover */
+}
+
+.data-source-link a {
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.data-source-link a:hover {
+  text-decoration: underline;
+}
+
